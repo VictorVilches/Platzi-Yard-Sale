@@ -24,6 +24,10 @@
       font-family: 'Quicksand', sans-serif;
     }
     .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
       padding: 24px;
     }
     .mobile-menu a {
@@ -36,12 +40,29 @@
       padding: 0;
       margin: 24px 0 0;
       list-style: none;
+     
     }
-    .mobile-menu ul:nth-child(1) {
+    .mobile-menu ul:nth-child(2) {
       border-bottom: 1px solid var(--very-light-pink);
     }
     .mobile-menu ul li {
       margin-bottom: 24px;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+    }
+    .mobile-menu ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .categories, .account {
+      margin-bottom: 24px;
+    }
+    .categories ul {
+      border-bottom: 1px solid var(--very-light-pink);
     }
     .email {
       font-size: var(--sm);
@@ -55,47 +76,31 @@
 </head>
 <body>
   <div class="mobile-menu">
-    <ul>
-      <li>
-        <a href="/">CATEGORIES</a>
-      </li>
-      <li>
-        <a href="/">All</a>
-      </li>
-      <li>
-        <a href="/">Clothes</a>
-      </li>
-      <li>
-        <a href="/">Electronics</a>
-      </li>
-      <li>
-        <a href="/">Furnitures</a>
-      </li>
-      <li>
-        <a href="/">Toys</a>
-      </li>
-      <li>
-        <a href="/">Other</a>
-      </li>
-    </ul>
+    <div class="categories">
+      <ul>
+        <li><a href="/">CATEGORIES</a></li>
+        <li><a href="/">All</a></li>
+        <li><a href="/">Clothes</a></li>
+        <li><a href="/">Electronics</a></li>
+        <li><a href="/">Furnitures</a></li>
+        <li><a href="/">Toys</a></li>
+        <li><a href="/">Other</a></li>
+      </ul>
+    </div>
 
-    <ul>
-      <li>
-        <a href="/">My orders</a>
-      </li>
-      <li>
-        <a href="/">My account</a>
-      </li>
-    </ul>
+    <div class="account">
+      <ul>
+        <li><a href="/">My orders</a></li>
+        <li><a href="/">My account</a></li>
+      </ul>
+    </div>
 
-    <ul>
-      <li>
-        <a href="/" class="email">platzi@example.com</a>
-      </li>
-      <li>
-        <a href="/" class="sign-out">Sign out</a>
-      </li>
-    </ul>
+    <div class="user">
+      <ul>
+        <li><a href="/" class="email">hola@victordevone.com</a></li>
+        <li><a href="/" class="sign-out">Sign out</a></li>
+      </ul>
+    </div>
   </div>
 </body>
 </html>
